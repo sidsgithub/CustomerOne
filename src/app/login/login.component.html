@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+    <!-- <div *ngFor = "let emp of employeeList">
+            {{emp.username}}
+            {{emp.password}}
+    </div> -->
+    <h1>
+            Welcome To Customer One System
+    </h1>
+<div class = "form">
+    <form [formGroup]="employeeForm">
+        <span>*</span>
+        <label for = "name">User Name :</label>
+        <input type="text" class = "name" formControlName = "username" id = "name"/>
+        <span *ngIf="((employeeForm.get('username').touched ||employeeForm.get('username').dirty) && employeeForm.get('username').errors) ">
+            <span *ngIf="(employeeForm.get('username').errors.required)" style="color:red;">
+                        Enter username
+            </span>
+        </span>
+        <br><br>
+        <span>*</span>
+        <label for = "password">Password :</label>
+        <input type="password" class = "password" formControlName = "password" id = "password"/>
+        <span *ngIf="((employeeForm.get('password').touched ||employeeForm.get('password').dirty) && employeeForm.get('password').errors) ">
+            <span *ngIf="(employeeForm.get('password').errors.required)" style="color:red;">
+                        Enter password
+            </span>
+        </span>
+        <br>
+        <div class="btn btn-toolbar" >
+        <input class="button" type="submit" class="btn btn-success" value="Submit" (click)="onSubmit()"/>
+        <input type = "reset" class="button" class="btn btn-primary" value="Refresh" /> 
+    </div>
+        <span class = "display" *ngIf="!msg">username and password didn't match</span>
+    </form>
+</div>
+</body>
+</html>

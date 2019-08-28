@@ -1,0 +1,55 @@
+.form{
+    position: absolute;
+  left: 40%;
+  top: 20%;
+  
+}
+h1{
+    text-align: center;
+  }
+body{
+      align-content: center;
+  }
+input.name{
+    margin: 10px;
+    padding : 5px;
+    border: 1px solid;
+}
+input.password{
+    margin: 20px;
+    padding : 5px;
+    border: 1px solid;
+}
+input.contactnumber{
+    margin: 20px;
+    padding : 5px;
+    border: 1px solid;
+}
+input.email{
+    margin: 20px;
+    padding : 5px;
+    border: 1px solid;
+}
+input.button{
+    position: relative;
+    left:80px;
+    /* border: hidden; */
+    margin: 20px;
+    padding : 5px;
+}
+select{
+    margin: 20px;
+    padding : 5px;
+    border: 1px solid;
+}
+span{
+    color: red;
+}
+span{
+    color: rgb(202, 27, 27);
+}
+span.display{
+    position: relative;
+    left: 30%;
+    right: 30%;
+}

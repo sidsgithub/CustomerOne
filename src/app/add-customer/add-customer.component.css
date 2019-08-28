@@ -1,0 +1,16 @@
+
+span{
+    color:red;
+    position: relative;
+    left: 0%;
+}
+
+
+
+
+span.error{
+   
+   left:2%;
+    color:red;
+    position: relative;
+}

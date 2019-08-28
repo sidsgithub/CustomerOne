@@ -1,0 +1,167 @@
+<div class="panel-heading" style="text-align: center">
+    <h1>Add Customer</h1>
+</div>
+<hr>
+<div class ="container">
+    <form [formGroup] = "addCustomerForm">
+<div class="panel-body">
+        <table align="center">
+            <tr>
+                <td><span>*</span><label for = "cname">Name : </label></td>
+                <td><input id="cname" type = "text" formControlName = "customername">
+                    <span class = "error" *ngIf="(
+                        (addCustomerForm.get('customername').touched||addCustomerForm.get('customername').dirty) && addCustomerForm.get('customername').errors)">
+                        <span *ngIf="(addCustomerForm.get('customername').errors.required)">Name is required</span>
+                    </span>
+                </td>
+               
+
+            </tr>
+            <br>
+            <tr><td><span>*</span><label for = "cdob">Date OF Birth : </label></td>
+                    <td> <input id="cdob" type = "date" formControlName = "dob">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('dob').touched||addCustomerForm.get('dob').dirty) && addCustomerForm.get('dob').errors)">
+                            <span *ngIf="(addCustomerForm.get('dob').errors.required)">Date of Birth is required</span>
+                        </span>
+                    </td>
+                </tr>
+                <br>
+
+                <tr><td><span>*</span><label for = "caddress1">Address1: </label></td>
+                    <td>  <input id="caddress1" type = "text" formControlName = "address_line1">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('address_line1').touched||addCustomerForm.get('address_line1').dirty) && addCustomerForm.get('address_line1').errors)">
+                            <span *ngIf="(addCustomerForm.get('address_line1').errors.required)">Addressline 1 is required</span>
+                        </span>
+                    </td>
+                </tr>
+                <br>
+                <tr><td> <span>*</span><label for = "caddress2">Address2 : </label></td>
+                    <td>  <input id="caddress2" type = "text" formControlName = "address_line2">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('address_line2').touched||addCustomerForm.get('address_line2').dirty) && addCustomerForm.get('address_line2').errors)">
+                            <span *ngIf="(addCustomerForm.get('address_line2').errors.required)">Address Line 2 is required</span>
+                        </span>
+                    </td>
+                </tr>
+                <br>
+                <tr><td><span>*</span><label for = "ccity">City : </label></td>
+                    <td>  <input id="ccity" type = "text" formControlName = "city"><span class = "error" *ngIf="(
+                        (addCustomerForm.get('city').touched||addCustomerForm.get('city').dirty) && addCustomerForm.get('city').errors)">
+                        <span *ngIf="(addCustomerForm.get('city').errors.required)">City is required</span>
+                    </span>
+                    </td>
+                </tr>
+                <br>
+                <tr><td><span>*</span><label for = "cpin">Pincode : </label></td>
+                    <td> <input id="cpin" type = "text" formControlName = "pincode">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('pincode').touched||addCustomerForm.get('pincode').dirty) && addCustomerForm.get('pincode').errors)">
+                            <span *ngIf="(addCustomerForm.get('pincode').errors.required)">Pincode is required</span>
+                        </span>
+                    </td>
+                </tr>
+                <br>
+                <tr><td><label for = "cemail">Email ID : </label></td>
+                    <td> <input id="cemail" type = "text" formControlName = "email">
+                    </td>
+                </tr>
+                <br>
+                <tr><td><label for = "cpan">PAN Number : </label></td>
+                    <td> <input id="cpan" type = "text" formControlName = "pan_number">
+                    </td>
+                </tr>
+                <br>
+                <tr><td> <span>*</span><label for = "ccontact">Contact Number : </label></td>
+                    <td> <input id="ccontact" type = "text" formControlName = "contact_number">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('contact_number').touched||addCustomerForm.get('contact_number').dirty) && addCustomerForm.get('contact_number').errors)">
+                            <span *ngIf="(addCustomerForm.get('contact_number').errors.required)">Contact Number is required</span>
+                        </span>
+                    </td>
+                </tr>
+                <br>
+                <tr><td> <span>*</span><label for = "coccupation">Occupation : </label></td>
+                    <td> <input id="coccupation" type = "text" formControlName = "occupation">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('occupation').touched||addCustomerForm.get('occupation').dirty) && addCustomerForm.get('occupation').errors)">
+                            <span *ngIf="(addCustomerForm.get('occupation').errors.required)">Occupation is required</span>
+                        </span>
+                    </td>
+                </tr>
+                <br>
+                <tr><td><label for = "cincome">Monthly Income : </label></td>
+                    <td><input id="cincome" type = "text" formControlName = "income">
+                    </td>
+                </tr>
+                <br>
+                <tr><td> <span>*</span><label for = "cid">User Id : </label></td>
+                    <td><input id="cid" type = "text" formControlName = "user_id">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('user_id').touched||addCustomerForm.get('user_id').dirty) && addCustomerForm.get('user_id').errors)">
+                            <span *ngIf="(addCustomerForm.get('user_id').errors.required)">User Id is required</span>
+                        </span>
+                    </td>
+                </tr>
+                <br>
+                <tr><td> <span>*</span><label for = "cpassword">Password : </label></td>
+                    <td><input id="cpassword" type = "password" formControlName = "password">
+                        <span class = "error" *ngIf="(
+                            (addCustomerForm.get('password').touched||addCustomerForm.get('password').dirty) && addCustomerForm.get('password').errors)">
+                            <span *ngIf="(addCustomerForm.get('password').errors.required)">Password is required</span>
+                        </span>
+                    </td>
+                </tr>
+                 <br>
+                    <tr><td><span>*</span><label for = "crepassword">Re-enter Password : </label></td>
+                        <td><input id="crepassword" type = "password" formControlName = "repassword">
+                            <span class = "error" *ngIf="(
+                                (addCustomerForm.get('repassword').touched||addCustomerForm.get('repassword').dirty) && addCustomerForm.get('repassword').errors)">
+                                <span *ngIf="(addCustomerForm.get('repassword').errors.required)">Re-enter the same password</span>
+                            </span>
+                        </td>
+                </tr>
+        </table>
+    </div>
+        <div class="panel-footer" style="text-align: center">
+<div class="btn btn-toolbar"> 
+        <button type="button" class="btn btn-primary" name = "Submit"  (click) ="onSubmit() "[disabled]="!addCustomerForm.valid">Submit</button>
+        <button type="reset" class="btn btn-success" name="Refresh">Refresh</button>
+        <button type = "button" class="btn btn-primary"  name ="Back" (click) ="onBack()">Back</button>
+    </div>
+</div>
+    </form>
+    <br>
+    <br>
+    <!-- <table border = 1>
+        <tr>
+            <th>name</th>
+            <th>dob</th>
+            <th>address1</th>
+            <th>address2</th>
+            <th>city</th>
+            <th>pincode</th>
+            <th>email</th>
+            <th>pan</th>
+            <th>contact</th>
+            <th>Occupation</th>
+            <th>Income</th>
+            <th>userid</th>
+        </tr>
+        <tr *ngFor="let cus of customerList">
+            <td>{{cus.Name}}</td>
+            <td>{{cus.DateOfBirth}}</td>
+            <td>{{cus.Address1}}</td>
+            <td>{{cus.Address2}}</td>
+            <td>{{cus.City}}</td>
+            <td>{{cus.Pincode}}</td>
+            <td>{{cus.EmailId}}</td>
+            <td>{{cus.PANNumber}}</td>
+            <td>{{cus.ContactNumber}}</td>
+            <td>{{cus.Occupation}}</td>
+            <td>{{cus.MonthlyIncome}}</td>
+            <td>{{cus.UserId}}</td>
+        </tr>
+    </table> -->
+</div>
