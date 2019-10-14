@@ -1,0 +1,58 @@
+<h1>Customer Details</h1>
+
+
+
+<table class="table table-striped" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Address</th>
+        <th>Emial Id</th>
+        <th>PAN Number</th>
+        <th>Contact</th>
+        <th>Occupation</th>
+        <th>Income</th>
+        <th width = "300px" style="text-align: center">AccountDetails
+            <tr><th width="100px">Number</th>
+                <th width="100px">Holder Name</th>
+                <th width="100px">Balance</th></tr>
+            <!-- <tr>Acccount number</tr> -->
+            </th>
+        
+
+        
+    </tr>
+    <tr *ngFor="let cus of CustomerName">
+        <td>{{cus.customername||cus.account_holder_name}}</td>
+        <td>{{cus.dob}}</td>
+        <td>{{cus.address_line1}} </td> 
+        <td>{{cus.email}}</td>
+        <td>{{cus.pan_number}}</td>
+        <td>{{cus.contact_number}}</td>
+        <td>{{cus.occupation}}</td>
+        <td>{{cus.income}}</td> 
+        <!-- account table -->
+        <td>
+            <tr *ngFor="let account of cus.account,let acc of accountNumber">
+                <td width="100px">{{account.account_number||acc.account_number}}</td>
+                <td width="100px">{{account.account_holder_name}}</td>
+                <td width="100px">{{account.balance}}</td></tr>
+        </td>
+    </tr> 
+</table>
+<button type = "button" class="btn btn-primary"  name ="Back" (click) ="onBack()">Back</button>
+
+
+<!-- <table border=1>
+    <tr>
+        <th>Account Number</th>
+        <th>Account Type</th>
+        <th>Balance</th>
+    </tr>
+    <tr *ngFor="let cus of CustomerName">
+        <td>{{cus.account.accountno}}</td>
+        <td>{{cus.account.accountno}}</td>
+        <td>{{cus.account.accountno}}</td>
+
+    </tr>
+</table> -->

@@ -1,0 +1,14 @@
+<h1>Account Details</h1>
+<table class="table table-striped" border="1">
+    <tr>
+        <th>Holder Name</th>
+        <th>Balance</th>
+        <th>Account type</th>
+    </tr>
+    <tr *ngFor="let cus of AccountList">
+        <td>{{cus.account_holder_name}}</td>
+        <td>{{cus.balance}}</td>
+        <td>{{cus.account_type}} </td> 
+    </tr> 
+</table>
+<button type = "button" class="btn btn-primary"  name ="Back" (click) ="onBack()">Back</button>

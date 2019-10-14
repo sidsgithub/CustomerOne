@@ -1,0 +1,49 @@
+<body>
+    <h1 style="text-align: center">Employee Login</h1>
+    <br><br>
+    <div class = "form">
+          <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      
+              <table align="center">
+      
+                  <tr>
+                      <td><span>*</span>
+                          <label for = "name">&nbsp;User Name :&nbsp;&nbsp;</label></td>
+                      <td><input type="text" class = "name" formControlName = "username" id = "name" aria-selected="true"/>
+                          <span *ngIf="((employeeForm.get('username').touched ||employeeForm.get('username').dirty) && employeeForm.get('username').errors) ">
+                              <span *ngIf="(employeeForm.get('username').errors.required)" style="color:red;">
+                                        &nbsp;&nbsp;Enter username
+                              </span>
+                          </span></td>
+                  </tr><br>
+      
+                  <tr>
+      
+                      <td> <span>*</span>
+                          <label for = "password">&nbsp;Password :</label></td>
+                      <td><input type="password" class = "password" formControlName = "password" id = "password"/>
+                          <span *ngIf="((employeeForm.get('password').touched ||employeeForm.get('password').dirty) && employeeForm.get('password').errors) ">
+                              <span *ngIf="(employeeForm.get('password').errors.required)" style="color:red;">
+                                          &nbsp;&nbsp;Enter password
+                              </span>
+                          </span></td>
+                  </tr><br>
+      
+                  <tr>
+                  
+                   <td style="text-align: center"><input type="submit" class="btn btn-success"  /></td>
+                   <td style="text-align: center"><input type="reset" class="btn btn-primary" value="Refresh" (click)="onRefresh()"/> </td>
+                      
+              
+                </tr>
+      
+              </table>
+              
+              </form>
+              </div>
+              <br><br><br> <br>
+        
+ </body>
+ 
+ 
+ 

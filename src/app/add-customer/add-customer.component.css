@@ -1,0 +1,12 @@
+
+span{
+    color:red;
+    position: absolute;
+    white-space: nowrap;
+}
+
+span.error{
+    color:red;
+    position: absolute;
+    white-space: nowrap;
+}

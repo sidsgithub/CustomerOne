@@ -1,0 +1,50 @@
+<body>
+	<div class="container">
+<form [formGroup] = "addCustomerForm"  (ngSubmit)="onSubmit(addCustomerForm.value)"> 
+        <div class="panel-body">
+          <h1
+          style="text-align: center">Customer Search
+        </h1>
+  <hr>
+<table align="center">
+    <tr>
+        <td><span>*</span><label><b> Name </b></label></td>
+        <td><input type="text" formControlName = "customername" [appDisable]="onchangename"></td>
+    </tr><br>
+    <tr>
+        <td><span>*</span><label><b>Customer ID</b></label></td>
+            <td><input type="text" formControlName = "customerid" [appDisable]="onchangeid"></td>
+    </tr><br>
+    <tr>
+                <td><span>*</span><label><b>Date of Birth</b></label></td>
+                <td><input type="text" formControlName = "dob" [appDisable]="onchangedob"></td>
+            </tr><br>
+            <tr>
+                    <td><span>*</span><label><b>Account Number</b></label></td>
+                    <td><input type="text" formControlName = "account_number" [appDisable]="onchangeh"></td>
+                </tr><br>
+                <tr>
+                        <td><span>*</span><label><b>Email Id</b></label></td>
+                        <td><input type="text" formControlName = "email" [appDisable]="onchangeemail"></td>
+                    </tr><br>
+                    <tr>
+                            <td><span>*</span><label><b>Pan Number</b></label></td>
+                            <td><input type="text" formControlName = "pan_number" [appDisable]="onchangepan"></td>
+                        </tr><br>
+                        <tr> 
+                                <td><span>*</span><label><b>Contact Number</b></label></td>
+                                <td><input type="text" formControlName = "contact_number" [appDisable]="onchangecontact"></td>
+                            </tr>
+</table>
+ </div>
+ <div class="panel-footer" style="text-align: center">      
+<div class="btn btn-toolbar">
+<button type="submit" class="btn btn-success">Submit</button>
+ <button type="reset" class="btn btn-primary" >Refresh</button>
+ <button type = "button" class="btn btn-primary"  name ="Back" (click) ="onBack()">Back</button>
+</div>
+ </div>
+</form>
+</div>
+
+</body>
